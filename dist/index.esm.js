@@ -2425,7 +2425,7 @@ var StyledNav = styled.nav(templateObject_2$e || (templateObject_2$e = __makeTem
     return theme.nav.background;
 });
 var BodyWrapper = styled.div(templateObject_3$8 || (templateObject_3$8 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n"], ["\n  position: relative;\n  display: flex;\n"])));
-var Inner = styled.div(templateObject_4$3 || (templateObject_4$3 = __makeTemplateObject(["\n  flex-grow: 1;\n  // margin-top: ", ";\n  margin-top:64px;\n  transition: margin-top 0.2s;\n  transform: translate3d(0, 0, 0);\n  ", " {\n    // margin-left: ", ";\n    margin-left:auto;\n    margin-right:auto;\n    // max-width: ", ";\n  }\n"], ["\n  flex-grow: 1;\n  // margin-top: ", ";\n  margin-top:64px;\n  transition: margin-top 0.2s;\n  transform: translate3d(0, 0, 0);\n  ", " {\n    // margin-left: ", ";\n    margin-left:auto;\n    margin-right:auto;\n    // max-width: ", ";\n  }\n"])), function (_a) {
+var Inner = styled.div(templateObject_4$3 || (templateObject_4$3 = __makeTemplateObject(["\n  flex-grow: 1;\n  // margin-top: ", ";\n  margin-top: 64px;\n  transition: margin-top 0.2s;\n  transform: translate3d(0, 0, 0);\n  ", " {\n    // margin-left: ", ";\n    margin-left: auto;\n    margin-right: auto;\n    // max-width: ", ";\n  }\n"], ["\n  flex-grow: 1;\n  // margin-top: ", ";\n  margin-top: 64px;\n  transition: margin-top 0.2s;\n  transform: translate3d(0, 0, 0);\n  ", " {\n    // margin-left: ", ";\n    margin-left: auto;\n    margin-right: auto;\n    // max-width: ", ";\n  }\n"])), function (_a) {
     var showMenu = _a.showMenu;
     return (showMenu ? MENU_HEIGHT + "px" : 0);
 }, function (_a) {
@@ -2485,10 +2485,28 @@ var Menu = function (_a) {
                 React.createElement(Logo$1, { isPushed: isPushed, togglePush: function () { return setIsPushed(function (prevState) { return !prevState; }); }, isDark: isDark, href: "https://mozartfinance.io" }),
                 React.createElement("div", { className: "menuconntouter" },
                     React.createElement("div", { className: "menulinkouter" },
+                        React.createElement("div", { className: "centeric" },
+                            React.createElement("div", { className: "hamburger" },
+                                React.createElement("input", { className: "menu-icon", type: "checkbox", id: "menu-icon", name: "menu-icon" }),
+                                // @ts-ignore}
+                                React.createElement("label", { for: "menu-icon" }),
+                                React.createElement("nav", { className: "nav" },
+                                    React.createElement("ul", { className: "pt-5" },
+                                        React.createElement("li", null,
+                                            React.createElement("a", { href: "#" }, "Melody Farm")),
+                                        React.createElement("li", null,
+                                            React.createElement("a", { href: "#" }, "Coingecko")),
+                                        React.createElement("li", null,
+                                            React.createElement("a", { href: "#" }, "Dex Guru")),
+                                        React.createElement("li", null,
+                                            React.createElement("a", { href: "#" }, "Dex Tools")),
+                                        React.createElement("li", null,
+                                            React.createElement("a", { href: "#" }, "Audited by xxxx")))))),
                         React.createElement(PanelFooter, { isPushed: isPushed, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, pushNav: setIsPushed, links: links, priceLink: priceLink })),
                     React.createElement("div", { className: "connectrowouter" },
                         React.createElement("div", { className: "dropdown" },
                             React.createElement("input", { type: "checkbox", id: "dropdown" }),
+                            // @ts-ignore}
                             React.createElement("label", { className: "dropdown__face", for: "dropdown" },
                                 React.createElement("div", { className: "dropdown__text" },
                                     React.createElement("img", { src: "images/link.png", alt: "Link" })),
