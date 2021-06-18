@@ -73,6 +73,7 @@ const Menu: React.FC<NavProps> = ({
   setLang,
   currentLang,
   cakePriceUsd,
+  violaPriceUsd,
   links,
   priceLink,
   profile,
@@ -164,6 +165,7 @@ const Menu: React.FC<NavProps> = ({
                 setLang={setLang}
                 currentLang={currentLang}
                 cakePriceUsd={cakePriceUsd}
+                violaPriceUsd={violaPriceUsd}
                 pushNav={setIsPushed}
                 links={links}
                 priceLink={priceLink}
@@ -266,6 +268,7 @@ const Menu: React.FC<NavProps> = ({
                 setLang={setLang}
                 currentLang={currentLang}
                 cakePriceUsd={cakePriceUsd}
+                violaPriceUsd={violaPriceUsd}
                 pushNav={setIsPushed}
                 links={links}
                 priceLink={priceLink}
