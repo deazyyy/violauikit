@@ -100,9 +100,7 @@ const PanelFooter: React.FC<Props> = ({
                     style={{ marginRight: "4px" }}
                     alt="img"
                   />
-                  <Text color="textSubtle" bold>
-                    {violaPriceUsd}
-                  </Text>
+                  <Text color="textSubtle" bold>{`$${violaPriceUsd.toFixed(3)}`}</Text>
                 </div>
               </div>
             </PriceLink>
