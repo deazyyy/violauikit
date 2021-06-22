@@ -2180,7 +2180,7 @@ var PanelFooter = function (_a) {
                         React__default['default'].createElement(Text, { color: "textSubtle", bold: true }, "$" + cakePriceUsd.toFixed(3))),
                     React__default['default'].createElement("div", null,
                         React__default['default'].createElement("img", { src: "images/mozart/mozart-head-viola.png", width: "30", height: "30", style: { marginRight: "4px" }, alt: "img" }),
-                        React__default['default'].createElement(Text, { color: "textSubtle", bold: true }, violaPriceUsd))))) : (React__default['default'].createElement(Skeleton, { width: 80, height: 24 }))),
+                        React__default['default'].createElement(Text, { color: "textSubtle", bold: true }, "$" + violaPriceUsd.toFixed(3)))))) : (React__default['default'].createElement(Skeleton, { width: 80, height: 24 }))),
             React__default['default'].createElement(Flex, null, socials.map(function (social, index) {
                 var Icon = Icons$1[social.icon];
                 var iconProps = { width: "24px", color: "textSubtle", style: { cursor: "pointer" } };

@@ -100,6 +100,7 @@ const PanelFooter: React.FC<Props> = ({
                     style={{ marginRight: "4px" }}
                     alt="img"
                   />
+                 {/* @ts-ignore */}
                   <Text color="textSubtle" bold>{`$${violaPriceUsd.toFixed(3)}`}</Text>
                 </div>
               </div>

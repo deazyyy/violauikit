@@ -2167,7 +2167,7 @@ var PanelFooter = function (_a) {
                         React.createElement(Text, { color: "textSubtle", bold: true }, "$" + cakePriceUsd.toFixed(3))),
                     React.createElement("div", null,
                         React.createElement("img", { src: "images/mozart/mozart-head-viola.png", width: "30", height: "30", style: { marginRight: "4px" }, alt: "img" }),
-                        React.createElement(Text, { color: "textSubtle", bold: true }, violaPriceUsd))))) : (React.createElement(Skeleton, { width: 80, height: 24 }))),
+                        React.createElement(Text, { color: "textSubtle", bold: true }, "$" + violaPriceUsd.toFixed(3)))))) : (React.createElement(Skeleton, { width: 80, height: 24 }))),
             React.createElement(Flex, null, socials.map(function (social, index) {
                 var Icon = Icons$1[social.icon];
                 var iconProps = { width: "24px", color: "textSubtle", style: { cursor: "pointer" } };
