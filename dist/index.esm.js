@@ -2160,7 +2160,7 @@ var PanelFooter = function (_a) {
     // }
     return (React.createElement(Container$4, null,
         React.createElement(SettingsEntry, null,
-            React.createElement(SocialEntry, { style: { display: "flex", justifyContent: "center" } }, cakePriceUsd ? (React.createElement(PriceLink, null,
+            React.createElement(SocialEntry, { style: { display: "flex", justifyContent: "center" } }, (cakePriceUsd && violaPriceUsd) ? (React.createElement(PriceLink, null,
                 React.createElement("div", { className: "priceouter" },
                     React.createElement("div", null,
                         React.createElement("img", { src: "images/mozart/mozart-head-sm.png", width: "30", height: "30", style: { marginRight: "4px" }, alt: "img" }),
@@ -2534,7 +2534,7 @@ var Menu = function (_a) {
                         React.createElement("a", { href: "https://exchange.mozartfinance.io", className: "nav_link" }, "Exchange"),
                         React.createElement(UserBlock, { account: account, login: login, logout: logout }))))),
         React.createElement(BodyWrapper, null,
-            React.createElement(Panel, { isPushed: isPushed, isMobile: isMobile, showMenu: showMenu, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, pushNav: setIsPushed, links: links, priceLink: priceLink }),
+            React.createElement(Panel, { isPushed: isPushed, isMobile: isMobile, showMenu: showMenu, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, violaPriceUsd: violaPriceUsd, pushNav: setIsPushed, links: links, priceLink: priceLink }),
             React.createElement(Inner, { isPushed: isPushed, showMenu: showMenu }, children),
             React.createElement(MobileOnlyOverlay, { show: isPushed, onClick: function () { return setIsPushed(false); }, role: "presentation" })),
         React.createElement("div", { className: "menutopdesk menufooter" },

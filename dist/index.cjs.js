@@ -2173,7 +2173,7 @@ var PanelFooter = function (_a) {
     // }
     return (React__default['default'].createElement(Container$4, null,
         React__default['default'].createElement(SettingsEntry, null,
-            React__default['default'].createElement(SocialEntry, { style: { display: "flex", justifyContent: "center" } }, cakePriceUsd ? (React__default['default'].createElement(PriceLink, null,
+            React__default['default'].createElement(SocialEntry, { style: { display: "flex", justifyContent: "center" } }, (cakePriceUsd && violaPriceUsd) ? (React__default['default'].createElement(PriceLink, null,
                 React__default['default'].createElement("div", { className: "priceouter" },
                     React__default['default'].createElement("div", null,
                         React__default['default'].createElement("img", { src: "images/mozart/mozart-head-sm.png", width: "30", height: "30", style: { marginRight: "4px" }, alt: "img" }),
@@ -2547,7 +2547,7 @@ var Menu = function (_a) {
                         React__default['default'].createElement("a", { href: "https://exchange.mozartfinance.io", className: "nav_link" }, "Exchange"),
                         React__default['default'].createElement(UserBlock, { account: account, login: login, logout: logout }))))),
         React__default['default'].createElement(BodyWrapper, null,
-            React__default['default'].createElement(Panel, { isPushed: isPushed, isMobile: isMobile, showMenu: showMenu, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, pushNav: setIsPushed, links: links, priceLink: priceLink }),
+            React__default['default'].createElement(Panel, { isPushed: isPushed, isMobile: isMobile, showMenu: showMenu, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, violaPriceUsd: violaPriceUsd, pushNav: setIsPushed, links: links, priceLink: priceLink }),
             React__default['default'].createElement(Inner, { isPushed: isPushed, showMenu: showMenu }, children),
             React__default['default'].createElement(MobileOnlyOverlay, { show: isPushed, onClick: function () { return setIsPushed(false); }, role: "presentation" })),
         React__default['default'].createElement("div", { className: "menutopdesk menufooter" },
