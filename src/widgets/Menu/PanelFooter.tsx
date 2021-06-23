@@ -79,7 +79,7 @@ const PanelFooter: React.FC<Props> = ({
     <Container>
       <SettingsEntry>
         <SocialEntry style={{ display: "flex", justifyContent: "center" }}>
-          {cakePriceUsd && violaPriceUsd ? (
+          {(cakePriceUsd && violaPriceUsd) ? (
             <PriceLink>
               <div className="priceouter">
                 <div>
@@ -100,7 +100,9 @@ const PanelFooter: React.FC<Props> = ({
                     style={{ marginRight: "4px" }}
                     alt="img"
                   />
-                  <Text color="textSubtle" bold>{`$${violaPriceUsd.toFixed(3)}`}</Text>
+                  <Text color="textSubtle" bold>
+                  {`$${violaPriceUsd.toFixed(3)}`}
+                  </Text>
                 </div>
               </div>
             </PriceLink>

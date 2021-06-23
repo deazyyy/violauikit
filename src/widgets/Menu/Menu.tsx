@@ -139,19 +139,19 @@ const Menu: React.FC<NavProps> = ({
                   <nav className="nav">
                     <ul className="pt-5">
                       <li>
-                        <a href="#">Melody Farm</a>
+                        <a href="https://mozartfinance.io/">Melody Farm</a>
                       </li>
                       <li>
-                        <a href="#">Coingecko</a>
+                        <a href="https://www.coingecko.com/en/coins/melody">Coingecko</a>
                       </li>
                       <li>
-                        <a href="#">Dex Guru</a>
+                        <a href="https://coinmarketcap.com/currencies/mozart-finance/">Coinmarketcap</a>
                       </li>
                       <li>
-                        <a href="#">Dex Tools</a>
+                        <a href="https://mozartfinance.gitbook.io/mozart-finance/roadmap">Roadmap</a>
                       </li>
                       <li>
-                        <a href="#">Audited by xxxx</a>
+                        <a href="https://github.com/mozartfinance/audits/blob/main/Mozart_SC_Audit_Report%20(3).pdf">Audited by Hacken</a>
                       </li>
                     </ul>
                   </nav>
@@ -233,6 +233,7 @@ const Menu: React.FC<NavProps> = ({
           setLang={setLang}
           currentLang={currentLang}
           cakePriceUsd={cakePriceUsd}
+          violaPriceUsd={violaPriceUsd}
           pushNav={setIsPushed}
           links={links}
           priceLink={priceLink}
