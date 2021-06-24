@@ -82,7 +82,7 @@ const PanelFooter: React.FC<Props> = ({
           {(cakePriceUsd && violaPriceUsd) ? (
             <PriceLink>
               <div className="priceouter">
-                <div>
+                <a href="https://viola.mozartfinance.io/">
                   <img
                     src="images/mozart/mozart-head-sm.png"
                     width="30"
@@ -91,8 +91,8 @@ const PanelFooter: React.FC<Props> = ({
                     alt="img"
                   />
                   <Text color="textSubtle" bold>{`$${cakePriceUsd.toFixed(3)}`}</Text>
-                </div>
-                <div>
+                </a>
+                <a href="https://mozartfinance.io/">
                   <img
                     src="images/mozart/mozart-head-viola.png"
                     width="30"
@@ -103,7 +103,7 @@ const PanelFooter: React.FC<Props> = ({
                   <Text color="textSubtle" bold>
                   {`$${violaPriceUsd.toFixed(3)}`}
                   </Text>
-                </div>
+                </a>
               </div>
             </PriceLink>
           ) : (
