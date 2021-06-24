@@ -61,6 +61,8 @@ const PanelFooter: React.FC<Props> = ({
   isDark,
   cakePriceUsd,
   violaPriceUsd,
+  linkviola,
+  linkmelody,
   currentLang,
   langs,
   setLang,
@@ -82,7 +84,7 @@ const PanelFooter: React.FC<Props> = ({
           {(cakePriceUsd && violaPriceUsd) ? (
             <PriceLink>
               <div className="priceouter">
-                <a href="https://viola.mozartfinance.io/">
+                <a href={linkviola} >
                   <img
                     src="images/mozart/mozart-head-sm.png"
                     width="30"
@@ -92,7 +94,7 @@ const PanelFooter: React.FC<Props> = ({
                   />
                   <Text color="textSubtle" bold>{`$${cakePriceUsd.toFixed(3)}`}</Text>
                 </a>
-                <a href="https://mozartfinance.io/">
+                <a href={linkmelody}>
                   <img
                     src="images/mozart/mozart-head-viola.png"
                     width="30"

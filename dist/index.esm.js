@@ -2148,7 +2148,7 @@ var PriceLink = styled.a(templateObject_2$c || (templateObject_2$c = __makeTempl
 var SettingsEntry = styled.div(templateObject_3$7 || (templateObject_3$7 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"])), MENU_ENTRY_HEIGHT);
 var SocialEntry = styled.div(templateObject_4$2 || (templateObject_4$2 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n"])), MENU_ENTRY_HEIGHT);
 var PanelFooter = function (_a) {
-    _a.isPushed; _a.pushNav; _a.toggleTheme; _a.isDark; var cakePriceUsd = _a.cakePriceUsd, violaPriceUsd = _a.violaPriceUsd; _a.currentLang; _a.langs; _a.setLang; _a.priceLink;
+    _a.isPushed; _a.pushNav; _a.toggleTheme; _a.isDark; var cakePriceUsd = _a.cakePriceUsd, violaPriceUsd = _a.violaPriceUsd, linkviola = _a.linkviola, linkmelody = _a.linkmelody; _a.currentLang; _a.langs; _a.setLang; _a.priceLink;
     // if (!isPushed) {
     // return (
     //   <Container>
@@ -2162,10 +2162,10 @@ var PanelFooter = function (_a) {
         React.createElement(SettingsEntry, null,
             React.createElement(SocialEntry, { style: { display: "flex", justifyContent: "center" } }, (cakePriceUsd && violaPriceUsd) ? (React.createElement(PriceLink, null,
                 React.createElement("div", { className: "priceouter" },
-                    React.createElement("a", { href: "https://viola.mozartfinance.io/" },
+                    React.createElement("a", { href: linkviola },
                         React.createElement("img", { src: "images/mozart/mozart-head-sm.png", width: "30", height: "30", style: { marginRight: "4px" }, alt: "img" }),
                         React.createElement(Text, { color: "textSubtle", bold: true }, "$" + cakePriceUsd.toFixed(3))),
-                    React.createElement("a", { href: "https://mozartfinance.io/" },
+                    React.createElement("a", { href: linkmelody },
                         React.createElement("img", { src: "images/mozart/mozart-head-viola.png", width: "30", height: "30", style: { marginRight: "4px" }, alt: "img" }),
                         React.createElement(Text, { color: "textSubtle", bold: true }, "$" + violaPriceUsd.toFixed(3)))))) : (React.createElement(Skeleton, { width: 80, height: 24 }))),
             React.createElement(Flex, null, socials.map(function (social, index) {
@@ -2448,7 +2448,7 @@ var MobileOnlyOverlay = styled(Overlay)(templateObject_5$1 || (templateObject_5$
     return theme.mediaQueries.nav;
 });
 var Menu = function (_a) {
-    var account = _a.account, login = _a.login, logout = _a.logout, isDark = _a.isDark, toggleTheme = _a.toggleTheme, langs = _a.langs, setLang = _a.setLang, currentLang = _a.currentLang, cakePriceUsd = _a.cakePriceUsd, violaPriceUsd = _a.violaPriceUsd, links = _a.links, priceLink = _a.priceLink; _a.profile; var children = _a.children;
+    var account = _a.account, login = _a.login, logout = _a.logout, isDark = _a.isDark, toggleTheme = _a.toggleTheme, langs = _a.langs, setLang = _a.setLang, currentLang = _a.currentLang, cakePriceUsd = _a.cakePriceUsd, violaPriceUsd = _a.violaPriceUsd, linkviola = _a.linkviola, linkmelody = _a.linkmelody, links = _a.links, priceLink = _a.priceLink; _a.profile; var children = _a.children;
     var isXl = useMatchBreakpoints().isXl;
     var isMobile = isXl === false;
     var _b = useState(!isMobile), isPushed = _b[0], setIsPushed = _b[1];
@@ -2507,7 +2507,7 @@ var Menu = function (_a) {
                                             React.createElement("a", { href: "https://mozartfinance.gitbook.io/mozart-finance/roadmap" }, "Roadmap")),
                                         React.createElement("li", null,
                                             React.createElement("a", { href: "https://github.com/mozartfinance/audits/blob/main/Mozart_SC_Audit_Report%20(3).pdf" }, "Audited by Hacken")))))),
-                        React.createElement(PanelFooter, { isPushed: isPushed, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, violaPriceUsd: violaPriceUsd, pushNav: setIsPushed, links: links, priceLink: priceLink })),
+                        React.createElement(PanelFooter, { isPushed: isPushed, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, violaPriceUsd: violaPriceUsd, linkmelody: linkmelody, linkviola: linkviola, pushNav: setIsPushed, links: links, priceLink: priceLink })),
                     React.createElement("div", { className: "connectrowouter" },
                         React.createElement("div", { className: "dropdown" },
                             React.createElement("input", { type: "checkbox", id: "dropdown" }),
@@ -2547,7 +2547,7 @@ var Menu = function (_a) {
                                 React.createElement("img", { src: "images/gitbook.png" })),
                             React.createElement("a", { target: "_blank", "aria-label": "Medium", href: "https://mozart-finance.medium.com/" },
                                 React.createElement("i", { className: "fab fa-medium" }))),
-                        React.createElement(PanelFooter, { isPushed: isPushed, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, violaPriceUsd: violaPriceUsd, pushNav: setIsPushed, links: links, priceLink: priceLink })),
+                        React.createElement(PanelFooter, { isPushed: isPushed, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, violaPriceUsd: violaPriceUsd, linkmelody: linkmelody, linkviola: linkviola, pushNav: setIsPushed, links: links, priceLink: priceLink })),
                     React.createElement("div", { className: "connectrowouter" },
                         React.createElement("a", { href: "https://exchange.mozartfinance.io", className: "nav_link" }, "Exchange"),
                         React.createElement(UserBlock, { account: account, login: login, logout: logout })))))));

@@ -2161,7 +2161,7 @@ var PriceLink = styled__default['default'].a(templateObject_2$c || (templateObje
 var SettingsEntry = styled__default['default'].div(templateObject_3$7 || (templateObject_3$7 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"])), MENU_ENTRY_HEIGHT);
 var SocialEntry = styled__default['default'].div(templateObject_4$2 || (templateObject_4$2 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n"])), MENU_ENTRY_HEIGHT);
 var PanelFooter = function (_a) {
-    _a.isPushed; _a.pushNav; _a.toggleTheme; _a.isDark; var cakePriceUsd = _a.cakePriceUsd, violaPriceUsd = _a.violaPriceUsd; _a.currentLang; _a.langs; _a.setLang; _a.priceLink;
+    _a.isPushed; _a.pushNav; _a.toggleTheme; _a.isDark; var cakePriceUsd = _a.cakePriceUsd, violaPriceUsd = _a.violaPriceUsd, linkviola = _a.linkviola, linkmelody = _a.linkmelody; _a.currentLang; _a.langs; _a.setLang; _a.priceLink;
     // if (!isPushed) {
     // return (
     //   <Container>
@@ -2175,10 +2175,10 @@ var PanelFooter = function (_a) {
         React__default['default'].createElement(SettingsEntry, null,
             React__default['default'].createElement(SocialEntry, { style: { display: "flex", justifyContent: "center" } }, (cakePriceUsd && violaPriceUsd) ? (React__default['default'].createElement(PriceLink, null,
                 React__default['default'].createElement("div", { className: "priceouter" },
-                    React__default['default'].createElement("a", { href: "https://viola.mozartfinance.io/" },
+                    React__default['default'].createElement("a", { href: linkviola },
                         React__default['default'].createElement("img", { src: "images/mozart/mozart-head-sm.png", width: "30", height: "30", style: { marginRight: "4px" }, alt: "img" }),
                         React__default['default'].createElement(Text, { color: "textSubtle", bold: true }, "$" + cakePriceUsd.toFixed(3))),
-                    React__default['default'].createElement("a", { href: "https://mozartfinance.io/" },
+                    React__default['default'].createElement("a", { href: linkmelody },
                         React__default['default'].createElement("img", { src: "images/mozart/mozart-head-viola.png", width: "30", height: "30", style: { marginRight: "4px" }, alt: "img" }),
                         React__default['default'].createElement(Text, { color: "textSubtle", bold: true }, "$" + violaPriceUsd.toFixed(3)))))) : (React__default['default'].createElement(Skeleton, { width: 80, height: 24 }))),
             React__default['default'].createElement(Flex, null, socials.map(function (social, index) {
@@ -2461,7 +2461,7 @@ var MobileOnlyOverlay = styled__default['default'](Overlay)(templateObject_5$1 |
     return theme.mediaQueries.nav;
 });
 var Menu = function (_a) {
-    var account = _a.account, login = _a.login, logout = _a.logout, isDark = _a.isDark, toggleTheme = _a.toggleTheme, langs = _a.langs, setLang = _a.setLang, currentLang = _a.currentLang, cakePriceUsd = _a.cakePriceUsd, violaPriceUsd = _a.violaPriceUsd, links = _a.links, priceLink = _a.priceLink; _a.profile; var children = _a.children;
+    var account = _a.account, login = _a.login, logout = _a.logout, isDark = _a.isDark, toggleTheme = _a.toggleTheme, langs = _a.langs, setLang = _a.setLang, currentLang = _a.currentLang, cakePriceUsd = _a.cakePriceUsd, violaPriceUsd = _a.violaPriceUsd, linkviola = _a.linkviola, linkmelody = _a.linkmelody, links = _a.links, priceLink = _a.priceLink; _a.profile; var children = _a.children;
     var isXl = useMatchBreakpoints().isXl;
     var isMobile = isXl === false;
     var _b = React.useState(!isMobile), isPushed = _b[0], setIsPushed = _b[1];
@@ -2520,7 +2520,7 @@ var Menu = function (_a) {
                                             React__default['default'].createElement("a", { href: "https://mozartfinance.gitbook.io/mozart-finance/roadmap" }, "Roadmap")),
                                         React__default['default'].createElement("li", null,
                                             React__default['default'].createElement("a", { href: "https://github.com/mozartfinance/audits/blob/main/Mozart_SC_Audit_Report%20(3).pdf" }, "Audited by Hacken")))))),
-                        React__default['default'].createElement(PanelFooter, { isPushed: isPushed, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, violaPriceUsd: violaPriceUsd, pushNav: setIsPushed, links: links, priceLink: priceLink })),
+                        React__default['default'].createElement(PanelFooter, { isPushed: isPushed, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, violaPriceUsd: violaPriceUsd, linkmelody: linkmelody, linkviola: linkviola, pushNav: setIsPushed, links: links, priceLink: priceLink })),
                     React__default['default'].createElement("div", { className: "connectrowouter" },
                         React__default['default'].createElement("div", { className: "dropdown" },
                             React__default['default'].createElement("input", { type: "checkbox", id: "dropdown" }),
@@ -2560,7 +2560,7 @@ var Menu = function (_a) {
                                 React__default['default'].createElement("img", { src: "images/gitbook.png" })),
                             React__default['default'].createElement("a", { target: "_blank", "aria-label": "Medium", href: "https://mozart-finance.medium.com/" },
                                 React__default['default'].createElement("i", { className: "fab fa-medium" }))),
-                        React__default['default'].createElement(PanelFooter, { isPushed: isPushed, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, violaPriceUsd: violaPriceUsd, pushNav: setIsPushed, links: links, priceLink: priceLink })),
+                        React__default['default'].createElement(PanelFooter, { isPushed: isPushed, isDark: isDark, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, violaPriceUsd: violaPriceUsd, linkmelody: linkmelody, linkviola: linkviola, pushNav: setIsPushed, links: links, priceLink: priceLink })),
                     React__default['default'].createElement("div", { className: "connectrowouter" },
                         React__default['default'].createElement("a", { href: "https://exchange.mozartfinance.io", className: "nav_link" }, "Exchange"),
                         React__default['default'].createElement(UserBlock, { account: account, login: login, logout: logout })))))));
