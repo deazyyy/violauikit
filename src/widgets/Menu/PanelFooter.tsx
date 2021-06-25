@@ -96,11 +96,11 @@ const PanelFooter: React.FC<Props> = ({
                 </a>
                 <a href={linkmelody}>
                   <img
-                    src="images/mozart/mozart-head-viola.png"
-                    width="30"
-                    height="30"
-                    style={{ marginRight: "4px" }}
-                    alt="img"
+                      src="images/mozart/mozart-head-viola.png"
+                      width="30"
+                      height="30"
+                      style={{ marginRight: "4px" }}
+                      alt="img"
                   />
                   <Text color="textSubtle" bold>
                   {`$${violaPriceUsd.toFixed(3)}`}

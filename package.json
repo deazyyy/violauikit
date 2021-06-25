@@ -19,15 +19,6 @@
     "test": "jest",
     "release": "yarn build && np"
   },
-<<<<<<< HEAD
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn format",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-=======
->>>>>>> 7fc47c74c03168a023373a4e5b970cba02266b71
   "jest": {
     "setupFilesAfterEnv": [
       "<rootDir>/src/setupTests.js"
